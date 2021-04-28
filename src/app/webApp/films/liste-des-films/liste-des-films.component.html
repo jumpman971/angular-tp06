@@ -1,0 +1,59 @@
+<div class="row">
+        <div id="panier" class="col-md-12 alert alert-danger">
+            <h2> <i class="fa fa-shopping-basket"></i> Panier</h2>
+            <div>
+                <p *ngFor="let film of panierFilm" class="alert alert-warning">
+                    ☼ {{ film.title }} <button class="btn btn-danger" (click)="supprPanierFilm(film)"><i
+                            class="fa fa-remove"></i></button>
+                </p>
+            </div>
+    
+            <button class="btn btn-danger" [ngStyle]="{'display':afficheBtnPanier()}" (click)="validerPanier()">
+                <i class="fa fa-credit-card"> </i>
+                Valider le panier
+                <i class="fa fa-shopping-basket"></i>
+            </button>
+    
+        </div>
+    </div>
+    
+    <div class="row" class="alert alert-primary">
+        <div class="col-md-12">
+            <h5>Votre programme :</h5>
+        </div>
+    </div>
+    
+    <div class="row">
+    
+        <div class="col-md-3" *ngFor="let film of stateFilms">
+    
+            <div class="card">
+                <div class="card-body alert alert-primary">
+    
+                    <img class="card-img-top" src="{{film.avatar}}" alt="" style="width:100px"> &nbsp;
+    
+                    <strong>{{film.title}}</strong> &nbsp;
+    
+                    <button class="btn btn-primary" (click)="addPanierFilm(film)">Choisir ce film</button>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- seconde étape -->
+<div class="row">
+    <div id="commande" class="col-md-12 alert alert-danger">
+        <h2> <i class="fa fa-first-order"></i> Commandes</h2>
+        <div>
+            <p *ngFor="let commande of commandesFilm" class="alert alert-warning">
+                ☼ Numéro de commande : {{ commande.payload.doc.id}} 
+                
+                <button class="btn btn-danger" (click)="supprCommande(commande)">
+                    <i class="fa fa-remove"></i>
+                </button>
+            </p>
+        </div>       
+
+    </div>
+</div>

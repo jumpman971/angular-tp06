@@ -1,0 +1,24 @@
+<h1>Gestion des données : AngularFire FireBase</h1>
+<h1 class="alert alert-primary">FIREBASE</h1>
+<p>FireBase est un produit Google.</p>
+<p>FireBase est une base de données en temps réel (Real Time DataBase).</p>
+<p>Il y a bien sûr une requête entre le client et le serveur comme une transaction traditionnelle vers du SQL (Rafraichir la page)</p>
+<p>Mais une fois que la requête est intialisée, toutes les mises à jour seront accessibles contrairement à une requête traditionnelle SQL</p>
+<p>Les MAJ s'afficheront immédiatement sur notre WebSite</p>
+<p><a href="https://firebase.google.com/">Accéder à Firebase</a></p>
+<p>Cliquez sur accéder à la console</p>
+<ol>
+    <li>Ajouter un projet</li>
+    <li>Dans le tableau de bord apparaissent tous les projets</li>
+    <li>Ajouter une application ( IOS - Android - Web ) => Web !</li>
+    <li>Donner un nom à l'application</li>
+    <li>Aller dans configuration (Firebase SDK snipet)</li>
+    <li>Copier la conf dans environnements.ts</li>
+    <li>La config sera lue depuis le service films.modules grâce au module : AngularFireModule.initializeApp(environment.firebaseConfig)</li>
+</ol>
+<p><img src="assets/images/firebase1.png" alt=""></p>
+
+<h1>Configuration des dépendances :</h1>
+<p>npm install firebase @angular/fire</p>
+<p>npm install -g firebase-tools</p>
+<p>npm install -g json-server</p>

@@ -1,0 +1,36 @@
+<h3>Liste des framworks</h3>
+
+<p>Choisissez votre framework préféré: </p>
+
+<u>
+    <li>
+        <a class="nav-link" [routerLink]="[{
+            outlets: {
+                outletFW: 'angular-11'
+            }
+        }]" routerLinkActive="lien-actif" [skipLocationChange]="true">
+            Angular 11
+        </a>
+    </li>
+    <li>
+        <a class="nav-link" [routerLink]="[{
+            outlets: {
+                outletFW: 'react-16'
+            }
+        }]" routerLinkActive="lien-actif" [skipLocationChange]="true">
+            React 16
+        </a>
+    </li>
+    <li>
+        <a class="nav-link" [routerLink]="[{
+            outlets: {
+                outletFW: 'vue'
+            }
+        }]" routerLinkActive="lien-actif" [skipLocationChange]="true">
+            Vue - Evan You
+        </a>
+    </li>
+</u>
+
+<p>Router Outlet framworks</p>
+<router-outlet name="outletFW"></router-outlet>
